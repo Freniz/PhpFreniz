@@ -1,0 +1,6 @@
+hiiiiiiiiiii
+35
+nizam
+mysql:
+mysql:
+a:3:{s:7:"success";s:4:"true";s:6:"fileid";i:166;s:6:"imgurl";s:36:"b6f13260875a44854a012be60ec95ee5.jpg";}

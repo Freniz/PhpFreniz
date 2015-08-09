@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/audio-player.js"></script>  
+        <script type="text/javascript">  
+            AudioPlayer.setup("player.swf", {  
+                width: 290  
+            });  
+        </script>  
+	
+<script type="text/javascript">
+function createdisplayinvitation(){
+	
+	var create=document.getElementById('invitation');
+	var a=document.createElement('div');
+	a.className='inivitation-maindiv';
+	var b=document.createElement('div');
+	b.className='invitation-header';
+	b.innerHTML='<div style="width:400px; font-size:18px; font-weight:bold; height:20px; ">Invitation<div style="width:320px; font-size:12px; font-weight:bold; height:20px; float:right; "><div style="width:80px; height:20px; float:right; border:solid 1px">Mutal:</div><div style="width:80px; height:20px; float:right; border:solid 1px">Votes:</div></div>';
+	a.appendChild(b);
+	var c=document.createElement('div');
+	c.className='invitation-to-div';
+	c.innerHTML='<div style="width:250px; margin-top:3px; height:20px; border:solid 1px">From:<div style="width:200px; float:right; height:20px; border:solid 1px"></div></div>';
+	a.appendChild(c);
+	var d=document.createElement('div');
+	d.className='invitation-gap';
+		a.appendChild(d);
+		var e=document.createElement('div');
+	e.className='inivation-textarea-div';
+	e.innerHTML='<div style="width:300px; border:solid 1px; height:60px"></div>';
+		a.appendChild(e);
+	var f=document.createElement('div');
+	f.className='invitation-gap';
+		a.appendChild(f);
+		
+		var g=document.createElement('div');
+	g.className='invitation-songdeticate';
+	g.innerHTML='Songs deticated:<p id="audioplayer_1">Alternative content</p>';
+		a.appendChild(g);
+		var h=document.createElement('div');
+	h.className='invitation-gap';
+		a.appendChild(h);
+		var j=document.createElement('div');
+	j.className='invitation-gap-1';
+		a.appendChild(j);
+		var l=document.createElement('div');
+	l.id='invitation-button';
+	l.innerHTML='<input type="button" value="Accept" style="float:left" /><input type="button" value="Decline" style="float:left" /><input type="button" value="Later" style="float:left" />';
+		a.appendChild(l);
+		create.appendChild(a);
+		AudioPlayer.embed("audioplayer_1", {soundFile: ""});
+		
+			
+}
+</script>
+<style>
+#invitation-button input{
+	border-radius: 8px;
+	box-shadow: 3px 3px 4px rgba(0,0,0,.5);
+	-moz-border-radius: 8px;
+	-moz-box-shadow: 3px 3px 4px rgba(0,0,0,.5);
+	font-size:12px;
+	background: #0C0;
+	-webkit-border-radius: 8px;
+	-webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.5);
+	text-decoration: none;
+}
+#invitation-button input:hover{
+	color:#fff;
+}
+#invitation-button{
+	width:400px; margin-top:23px; background-color:#C1D8A9; height:30px; border:solid 1px
+}
+.inivitation-maindiv{
+	width:400px; height:215px; border:solid 1px;
+	
+}
+.invitation-header{
+	width:400px;  height:20px;
+}
+.invitation-to-div{
+	width:250px; margin-left:20px; height:20px;
+}
+.invitation-gap{
+	width:300px; margin-top:10px;
+}
+.inivation-textarea-div{
+	width:350px; height:60px; margin-left:40px;
+}
+.invitation-songdeticate{
+	width:350px; height:20px; margin-left:20px;
+}
+.invitation-setbackground{
+	width:300px; height:30px;  margin-left:20px;
+}
+.invitation-gap-1{
+	width:300px; height:10px;
+}
+</style>
+</head>
+
+<body>
+
+<a onclick="createdisplayinvitation()">click</a>
+<div id="invitation">
+</div>
+</body>
+</html>

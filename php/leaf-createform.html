@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+            
+            var json={"1006":{"2506":"Airport","2508":"Arts/Entertainment","2523":"Attractions","2509":"Automobiles","2512":"Bank/Financial Services","2100":"Bar","1305":"Book store","2518":"Business Services","2264":"Religious organisation","2101":"Club","2519":"Community/Government","2250":"Education","2511":"Event planning/Event services","2513":"Food/Grocery","2514":"Health/Medical/Pharmacy","2515":"Home Interiors","2527":"Hospital/Clinic","2501":"Hotel","2503":"Landmark","1306":"Library","2500":"Local business","1111":"Cinemas","2528":"Museum/Art gallery","2231":"Outdoor gear/Sporting goods","2516":"Pet services","2517":"Professional services","2520":"Property","2522":"Public places","1900":"Restaurant/Cafe","2601":"School/University","2521":"Shopping/Retail","2510":"Beauty/Personal care","2524":"Sport/Recreation/Activities","2507":"Sports venue","2525":"Tours/Sightseeing","2505":"Couries/Cargoes","2526":"Transport","2602":"University"},"1007":{"1103":"Actor/Director","1601":"Artist","1600":"Athlete","1301":"Author","1609":"Business person","1606":"Chef","1802":"Coach","1610":"Comedian","1614":"Dancer","1608":"Doctor","1308":"Editor","1611":"Entertainer","1113":"Fictional character","1701":"Government official","1604":"Journalist","1607":"Lawyer","1612":"Monarch","1202":"Musician/Band","1605":"News personality","1700":"Politician","1108":"Producer","1602":"Public figure","1613":"Teacher","1109":"Writer"},"1000":{"1200":"Album","1209":"Concert venue","1212":"Music award","1213":"Music chart","1207":"Music video","1204":"Musical instrument","1202":"Musician/Band","1206":"Playlist","1210":"Radio station","1211":"Record label","1201":"Song"},"1001":{"1103":"Actor/Director","1113":"Fictional character","1105":"Movie","1111":"Cinemas","1108":"Producer","1110":"Studio","1112":"TV/Movie award","1109":"Writer"},"1015":{"1103":"Actor/Director","1405":"Episode","1113":"Fictional character","1110":"Studio","1404":"TV channel","1402":"TV network","1400":"TV show","1112":"TV/Movie award","1109":"Writer"},"1002":{"1301":"Author","1300":"Book","1305":"Book store","1308":"Editor","1306":"Library","1307":"Magazine","1304":"Publisher"},"1009":{"2215":"Appliances","2232":"Baby goods/Kids goods","2206":"Bags/Luggage","2216":"Building materials","2208":"Camera/Photo","2205":"Cars","2209":"Clothing","2217":"Commercial equipment","2210":"Computers","2263":"Drugs","2213":"Electronics","2252":"Food/Beverages","2219":"Furniture","2300":"Games/Toys","2214":"Health/Beauty","2218":"Home Interiors","2220":"Home Appliances","2226":"Jewellery/Watches","2221":"Kitchen/Cooking","2227":"Movies/Music","1204":"Musical instrument","2212":"Office supplies","2231":"Outdoor gear/Sporting goods","2222":"Park/Garden","2230":"Pet supplies","2201":"Product/Service","2211":"Software","2223":"Tools/Equipment","2262":"Vitamins/Supplements","2202":"Website","2224":"Wine/Spirits"},"1013":{"2244":"Aerospace/Defence","2240":"Automobiles and parts","2234":"Bank/Financial institution","2254":"Biotechnology","2247":"Chemicals","2264":"Religious organisation","2260":"Community organisation","2200":"Company","2255":"Computers/Technology","2248":"Consulting/Business Services","2250":"Education","2238":"Energy/Utility","2251":"Engineering/Construction","2246":"Farming/Agriculture","2252":"Food/Beverages","2604":"Government organisation","2214":"Health/Beauty","2243":"Medical/Pharmacy","2241":"Industrials","2236":"Insurance company","2256":"Internet/Software","2249":"Legal/Law","2233":"Media/News/Publishing","2245":"Mining/Materials","2235":"Non-governmental organisation (NGO)","2603":"Non-profit organisation","2600":"Organisation","2261":"Political organisation","2618":"Political party","2239":"Retail and consumer merchandise","2601":"School/University","2237":"Small business","2253":"Telecommunication","2242":"Transport/Freight","2258":"Travel/Leisure","2602":"University"},"1005":{"1803":"Sports team","1600":"Athlete","1802":"Coach","1804":"School sports team","1800":"Sports league","2507":"Sports venue"},"1016":{"2701":"Arts/Humanities","2702":"Business/Economy","2703":"Computers/Internet","2704":"Education","2705":"Entertainment","2706":"Government","2707":"Health/Wellness","2708":"Home/Garden","2715":"Local/Travel","2709":"News/Media","2700":"Personal blog","2717":"Personal website","2710":"Recreation/Sport","2711":"Reference","2712":"Regional","2713":"Science","2714":"Society/Culture","2716":"Teens/Kids"},"1018":{"2612":"Community"}};
+            var a=eval(json);
+            var b={"1006":"Businesses & places","1007":"Celebrities","1000":"Musics","1001":"Movies","1015":"Television","1002":"Books","1009":"Products","1013":"Organisations","1005":"Sports","1016":"Websites & blogs","1018":"Other"};
+            var c=new Array();
+for (var key in a)
+                {
+                    var d=new Array();
+                     for(var key1 in a[key])
+                        {
+                            value=a[key][key1];
+                            d[value]=value;
+                        }
+                        c[b[key]]=d;
+                }
+               window.onload=function(){
+                   var e=document.getElementById("category");
+                   for(var k in c)
+                       {
+                           var e1=document.createElement("option");
+                         e1.value=k;
+                         e1.innerHTML=k;
+                         e.appendChild(e1);
+                       }
+               }
+function displaysubcategory(value)
+            {
+                if(value!=0){
+                    var e=document.getElementById("subcategory");
+                    e.innerHTML='';
+                    for(var k in c[value]){
+                        var e1=document.createElement("option");
+                        e1.value=k;
+                        e1.innerHTML=c[value][k];
+                        e.appendChild(e1);
+                    }
+                }
+            }
+        </script>
+<script type="text/javascript">
+    
+function addtextarea(value)
+{
+    if(value!=''){
+    var e=document.getElementById("pagesinfo");
+    var e1=document.createElement('tr');
+    var e2=document.createElement('td');
+    e2.innerHTML=value;
+    e1.appendChild(e2);
+    var e3=document.createElement('td');
+    var e4=document.createElement('textarea');
+    e4.name=value;
+    e4.style.width='200px';
+    e4.style.height='50px';
+    
+    e3.appendChild(e4);
+    e1.appendChild(e3);
+    e.appendChild(e1);}
+
+}
+
+function submit_form()
+{
+    var a=$('form').serializeArray();
+    var b= new Array();
+    for(var k in a)
+    {
+        b[a[k]['name']]=a[k]['value'];
+    }
+    
+}
+</script>
+</head>
+
+<body>
+<input type="text" id='title' />
+    <input type="button" onclick="addtextarea(document.getElementById('title').value);document.getElementById('title').value='';" value="Add titles" />
+<form name="pageinfo" action="ajax/addpagesinfo.php">
+    <select name="category" id="category" onchange="displaysubcategory(document.getElementById('category').value)" autocomplete="off"><option value="0" selected>Select Category:</option>
+   </select>
+         <select name="subcategory" id="subcategory"  autocomplete="off"><option value="0" selected>Select SubCategory:</option>
+
+</select>
+    <table id="pagesinfo" cellpadding="3" cellspacing="3">
+<tr><td>About</td><td><textarea name='about' style="width:200px; height:50px"></textarea></td></tr>
+<tr><td>Decription</td><td><textarea name='description' style="width:200px; height:50px"></textarea></td></tr>
+
+</table>
+    <center><input type="submit" onclick="submit()" value="submit"/></center>
+    </form>
+    
+
+
+</body>
+</html>

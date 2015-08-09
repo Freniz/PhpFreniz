@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+
+<style type="text/css">
+.edit-phot-main{
+	width:50%; border:solid 1px; float:left;
+}
+</style>
+
+<script type="text/javascript">
+function editphoto(){
+	
+	var main=document.getElementById('photo-edit');
+	
+	var a=document.createElement('div');
+	
+	a.className='edit-phot-main';
+	
+	a.innerHTML='<div style="width:200px; height:200px; border:solid 1px; float:left"></div><div style="width:400px; border:solid 1px; float:left"><div style="width:400px; border:solid 1px; float:left"><label>Title</label><input type="text" size="50" /></div><div style="width:400px; border:solid 1px; float:left"><label>Description</label><textarea style="width:300px; height:50px;"></textarea></div><div style="width:400px; border:solid 1px;float:left"><label>Pin to Friends</label><input type="text" size="40" /><input type="hidden" /></div><div style="width:400px; border:solid 1px; float:left"></div></div>';
+
+
+main.appendChild(a);
+var b=document.createElement('div');
+b.style.width='50%';
+b.style.font='left';
+b.innerHTML='<input type="button" style="float:right" value="post to my album" />';
+main.appendChild(b);
+}
+</script>
+</head>
+
+<body>
+<div class="edit-phot-main" >
+<div style="width:200px; height:200px; border:solid 1px; float:left">
+
+</div>
+<div style="width:400px; border:solid 1px; float:left">
+<div style="width:400px; border:solid 1px; float:left">
+<label>Title</label>
+<input type="text" size="50" />
+</div>
+<div style="width:400px; border:solid 1px; float:left">
+<label>Description</label>
+<textarea style="width:300px; height:50px;"></textarea>
+</div>
+<div style="width:400px; border:solid 1px; float:left">
+<label>Pin to Friends</label>
+<input type="text" size="40" />
+<input type="hidden" />
+</div>
+<div style="width:400px; border:solid 1px; float:left">
+
+</div>
+</div>
+
+</div>
+<div style="width:50%; border:solid 1px; float:left">
+<input type="button" style="float:right" value="post to my album" />
+</div>
+
+
+<div id="photo-edit">
+</div>
+
+
+<a href="#" onclick="editphoto()">click</a>
+</body>
+</html>

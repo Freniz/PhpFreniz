@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<style>
+
+#update-stature-comment ul{
+	margin-top:3px;
+	display:block;
+}
+#update-stature-comment ul li{
+	display:inline;}
+	.main-update-stature{
+		width:100%; border:solid 1px; float:left;
+	}
+</style>
+<script type="text/javascript">
+function staturecontainer(){
+	var main=document.getElementById('update-stature');
+	var a=document.createElement('div');
+	a.className='main-update-stature';
+	a.innerHTML='<div style="width:100%; height:30px; border:solid 1px; float:left">name1 </div><div style="width:100%; margin-top:10px; height:100px; border:solid 1px; float:left">stature</div><div style="width:100%; margin-top:10px; height:20px; border:solid 1px; float:left"><div style="width:100px; height:20px; border:solid 1px; float:left">time</div></div><div id="update-stature-comment" style="width:100%; height:30px; border:solid 1px; float:left"><ul><li><a href="#" style="float:left; font-size:14px; font-weight:bold;text-decoration:none; cursor:pointer;color:#666">Vote</a></li></ul><div style="margin-top:-15px;"><ul style="margin-top:3px;"><li><a href="#" style="float:right; font-size:14px; font-weight:bold; text-decoration:none; color:#666; cursor:pointer;">Comment</a></li></ul></div></div><div style="width:100%; float:left; border:solid #0CC 1px"><div style="width:100%; float:left; border:solid 1px"><input type="text" style="width:99%; height:20px" /></div><div id="comment-div" style="width:100%; float:left; border:solid #C09 1px"></div></div>';
+	main.appendChild(a);
+	
+}
+function displayblog(){
+	var main=document.getElementById('update-stature');
+	var a=document.createElement('div');
+	a.className='main-update-stature';
+	a.innerHTML='<div style="width:100%; height:30px; border:solid 1px; float:left">name1 </div><div style="width:100%; margin-top:10px; height:100px; border:solid 1px; float:left">stature</div><div style="width:100%; margin-top:10px; height:20px; border:solid 1px; float:left"><div style="width:100px; height:20px; border:solid 1px; float:left">time</div></div><div id="update-stature-comment" style="width:100%; height:30px; border:solid 1px; float:left"><ul><li><a href="#" style="float:left; font-size:14px; font-weight:bold;text-decoration:none; cursor:pointer;color:#666">Vote</a></li></ul></div><div style="width:100%; float:left; border:solid #0CC 1px"><div style="width:100%; float:left; border:solid 1px"><input type="text" style="width:99%; height:20px" /></div><div id="comment-div" style="width:100%; float:left; border:solid #C09 1px"></div></div>';
+	main.appendChild(a);
+	
+}
+
+</script>
+</head>
+
+<body>
+
+<div class="main-update-stature" >
+<div style="width:100%; height:30px; border:solid 1px; float:left">
+name1 
+</div>
+<div style="width:100%; margin-top:10px; height:100px; border:solid 1px; float:left">
+stature
+</div>
+<div style="width:100%; margin-top:10px; height:20px; border:solid 1px; float:left">
+<div style="width:100px; height:20px; border:solid 1px; float:left">
+time
+</div>
+
+</div>
+<div id="update-stature-comment" style="width:100%; height:30px; border:solid 1px; float:left">
+
+<ul><li>
+<a href="#" style="float:left; font-size:14px; font-weight:bold; text-decoration:none; cursor:pointer;color:#666">Vote</a></li></ul>
+
+</div>
+
+<div style="width:100%; float:left; border:solid #0CC 1px">
+<div style="width:100%; float:left; border:solid 1px">
+<input type="text" style="width:99%; height:20px" />
+</div>
+<div id="comment-div" style="width:100%; float:left; border:solid #C09 1px">
+</div>
+</div>
+
+
+</div>
+<a onclick="staturecontainer()">display post</a>
+<a onclick="displayblog()">display post</a>
+
+<div id="update-stature">
+</div>
+
+</body>
+</html>

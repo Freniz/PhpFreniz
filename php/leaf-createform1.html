@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    
+function addtextarea(value)
+{
+    alert(value);
+    var e=document.getElementById("pagesinfo");
+    var e1=document.createElement('tr');
+    var e2=document.createElement('td');
+    e2.innerHTML=value;
+    e1.appendChild(e2);
+    var e3=document.createElement('td');
+    var e4=document.createElement('textarea');
+    e4.name=value;
+    e4.style.width='200px';
+    e4.style.height='50px';
+    e3.appendChild(e4);
+    e1.appendChild(e3);
+    e.appendChild(e1);
+}
+
+function submit_form()
+{
+    var a=$('form').serializeArray();
+    for(var k in a)
+        for(var k1 in a[k])
+            alert(k1+"="+a[k][k1]);
+}
+</script>
+</head>
+
+<body>
+    <input type="text" id='title' />
+    <input type="button" onclick="addtextarea(document.getElementById('title').value);document.getElementById('title').value='';" value="Add titles" />
+<form name="pageinfo" >
+    <table id="pagesinfo" cellpadding="3" cellspacing="3">
+<tr><td>About</td><td><textarea name='about' style="width:200px; height:50px"></textarea></td></tr>
+<tr><td>Decription</td><td><textarea name='description' style="width:200px; height:50px"></textarea></td></tr>
+
+</table>
+    <center><input type="submit" onclick="submit()" value="submit"/></center>
+    </form>
+    
+
+
+
+</body>
+</html>

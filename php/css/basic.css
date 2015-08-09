@@ -1,0 +1,63 @@
+html, body {
+	margin:0;
+	padding:0;
+}
+body{
+	text-align: center;
+	font-size:75%;
+	background-color: #eee;
+	color: #FFF;
+	
+}
+a{
+	color: #FFF;
+	text-decoration: none;
+}
+a:focus, a:hover, a:active {
+	text-decoration: underline;
+}
+
+pre {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	overflow-x: auto;
+}
+div#page {
+	width: 1024px;
+	
+	background-color: #fff;
+	margin: 0 auto;
+	text-align: left;
+	border-color: #ddd;
+	border-style: none solid solid;
+	border-width: medium 1px 1px;
+}
+
+div#page1 {
+	width: 600px;
+	
+	background-color: #fff;
+	margin: 0 auto;
+	text-align: left;
+	border-color: #ddd;
+	border-style: none solid solid;
+	border-width: medium 1px 1px;
+}
+div#container {
+	padding: 20px;
+	width:1000px;
+	
+	
+	
+}
+div#ads {
+	clear: both;
+	padding: 12px 0 12px 66px;
+}
+div#footer {
+	clear: both;
+	color: #777;
+	margin: 0 auto;
+	padding: 20px 0 40px;
+	text-align: center;
+}

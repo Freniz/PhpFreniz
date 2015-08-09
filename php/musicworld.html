@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="js/audio-player.js"></script>
+<script type="text/javascript">  
+            AudioPlayer.setup("player.swf", {  
+                width: 290  
+            });  
+        </script>  
+</head>
+
+<body>
+<div  style=" width:1000px; float:left; border:solid 1px">
+<div class="headerfont" style="width:200px; height:100; float:left; border:solid 1px">
+Music World
+</div>
+
+<div class="headerfont" style="width:700px; margin-top:50px;height:200px; float:left; border:solid 1px">
+Songs
+  <div style="float:left; margin-left:50px;">
+<table class="subfont" style="width:600px">
+        <tr>
+        <td>Song Name:</td><td><input type="text" name="username" size="60"/></td></tr>
+        <tr>
+        <td>URL:</td><td><input type="text" name="password" size="60"/></td></tr>
+        </table>
+  </div> 
+<div style="width:300px; height: 30px; margin-top: 20px; float: left; border: solid 1px">
+    <p id="audioplayer_1" style=" background-color:#333">Alternative content</p>
+<script type="text/javascript">  
+        AudioPlayer.embed("audioplayer_1", {soundFile: ""});
+		AudioPlayer.open("audioplayer_1",2);
+        </script> 
+</div>
+  <div>
+  <div style=" width:100px; margin-right:60px; margin-top:20px; height:40px; float:right">
+ <ul class="roundbuttons singlerdwidth" >
+        <li><a href="#">Add</a></li><li><a href="#">validate</a></li>
+        </ul>
+</div>
+
+  </div>    
+
+</div>
+
+<div class="headerfont" style="width:800px; float:left">
+Songs List
+<div>
+</div>
+</div>
+
+
+
+
+</div>
+
+</body>
+</html>
