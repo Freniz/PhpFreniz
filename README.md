@@ -1,2 +1,2 @@
 # php-freniz
-freniz social network with php code
+Social Network with php code
